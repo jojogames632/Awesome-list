@@ -4,15 +4,15 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link">Accueil</a>
+          <a class="nav-link" [class.active]="isActive(homePath)" (click)="navigate(homePath)">Accueil</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Connexion</a>
+          <a class="nav-link" [class.active]="isActive(loginPath)" (click)="navigate(loginPath)">Connexion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Inscription</a>
+          <a class="nav-link" [class.active]="isActive(registerPath)" (click)="navigate(registerPath)">Inscription</a>
         </li>
       </ul>
     </div>

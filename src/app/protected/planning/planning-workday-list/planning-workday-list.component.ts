@@ -22,7 +22,7 @@ export class PlanningWorkdayListComponent implements OnInit {
       { dueDate: 'Mercredi', doneTasks: 0, remainingTasks: 1 },
     ];
 
-    this.workdays$ = of(this.workdays).pipe(delay(100));
+    this.workdays$ = of(this.workdays).pipe(delay(400));
   }
 
   onWorkdayRemoved(dueDate: string) {
