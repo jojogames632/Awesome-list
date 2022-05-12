@@ -6,23 +6,32 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
+import { LoaderComponent } from './components/loader/loader.component';
+import { ToastrComponent } from './components/toastr/toastr.component';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoaderComponent,
+    ToastrComponent
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     PublicModule,
-    ProtectedModule
+    ProtectedModule,
+    AlertModule.forRoot(),
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent,
+    ToastrComponent
   ]
 })
 export class CoreModule {

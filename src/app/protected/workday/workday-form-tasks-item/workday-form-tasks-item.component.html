@@ -1,0 +1,8 @@
+<div [formGroup]="task" class="form-group row">
+  <div class="col-sm-6 px-0">
+    <input formControlName="name" type="text" class="form-control">
+  </div>
+  <div *ngIf="isLast && !isFirst" class="col-sm-5 align-self-center">
+    <i (click)="removeTask(index)" class="material-icons md-18 md-grey">clear</i>
+  </div>
+</div>
